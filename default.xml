@@ -8,16 +8,15 @@
   <remote  name="github"
            fetch=".." />
   
-  <default revision="refs/tags/android-5.1.1_r8"
+  <default revision="refs/tags/android-6.0.0_r1"
            remote="aosp"
-           sync-j="4" />
+           sync-j="12" />
 
 
 
-  <!--project path="build" name="platform/build" groups="pdk,tradefed" -->
-  <project path="build" name="Schischu/aosp_android_build" groups="pdk,tradefed" remote="github" revision="lollipop-mr1-release" >
+  <!--project path="build" name="platform/build" groups="pdk,tradefed" 
     <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
+  </project>-->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
@@ -41,11 +40,11 @@
   <!--project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" clone-depth="1" /-->
   <!--project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu" /-->
   <!--project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu" clone-depth="1" /-->
-
+<!--
   <project path="device/samsung/lt03lte" name="Schischu/aosp_android_device_samsung_lt03lte" remote="github" revision="lollipop-release" />
   <project path="kernel/samsung/lt03lte" name="Schischu/android_kernel_samsung_lt03lte" remote="github" revision="lollipop-release" />
   <project path="vendor/samsung/lt03lte" name="Schischu/android_vendor_samsung_lt03lte" remote="github" revision="lollipop-release" />
-
+-->
   <project path="device/sample" name="device/sample" groups="pdk" />
   <!--project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" /-->
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
@@ -191,7 +190,6 @@
   <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
   <project path="external/libvterm" name="platform/external/libvterm" groups="pdk-cw-fs" />
   <!--project path="external/libxml2" name="platform/external/libxml2" groups="pdk-cw-fs" /-->
-  <project path="external/libxml2" name="Schischu/aosp_android_external_libxml2" groups="pdk-cw-fs" remote="github" revision="lollipop-release" />
   <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv,pdk-cw-fs" />
   <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" groups="pdk-cw-fs" />
   <project path="external/littlemock" name="platform/external/littlemock" groups="pdk-cw-fs" />
@@ -275,9 +273,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" />
   <!--project path="frameworks/av" name="platform/frameworks/av" groups="pdk" /-->
-  <project path="frameworks/av" name="Schischu/aosp_android_frameworks_av" groups="pdk" remote="github" revision="lollipop-mr1-release" />
   <!--project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" /-->
-  <project path="frameworks/base" name="Schischu/aosp_android_frameworks_base" groups="pdk-cw-fs" remote="github" revision="lollipop-mr1-release" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -287,7 +283,6 @@
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs" />
   <!--project path="frameworks/native" name="platform/frameworks/native" groups="pdk" /-->
-  <project path="frameworks/native" name="Schischu/aosp_android_frameworks_native" groups="pdk" remote="github" revision="lollipop-mr1-release" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs" />
@@ -305,7 +300,6 @@
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs" />
   <!--project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" /-->
-  <project path="frameworks/opt/telephony" name="Schischu/aosp_android_frameworks_opt_telephony" groups="pdk" remote="github" revision="lollipop-mr1-release" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs" />
@@ -323,15 +317,10 @@
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <!--project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom,qcom_display" /-->
-  <project path="hardware/qcom/display" name="Schischu/aosp_android_hardware_qcom_display" groups="qcom,qcom_display" remote="github" revision="lollipop-release" />
   <!--project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps" /-->
-  <project path="hardware/qcom/gps" name="Schischu/aosp_android_hardware_qcom_gps" groups="qcom,qcom_gps" remote="github" revision="lollipop-release" />
   <!--project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" /-->
-  <project path="hardware/qcom/keymaster" name="Schischu/aosp_android_hardware_qcom_keymaster" groups="qcom" remote="github" revision="lollipop-release" />
   <!--project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" /-->
-  <project path="hardware/qcom/media" name="Schischu/aosp_android_hardware_qcom_media" groups="qcom" remote="github" revision="lollipop-release" />
   <!--project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" /-->
-  <project path="hardware/qcom/msm8x74" name="Schischu/aosp_android_hardware_qcom_msm8x74" groups="qcom_msm8x74" remote="github" revision="lollipop-release" />
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
