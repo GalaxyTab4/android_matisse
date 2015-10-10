@@ -2,6 +2,8 @@
 <manifest>
   <remote  name="aosp"
            fetch=".." />
+  <remote  name="sub" 
+           fetch="ssh://git@github.com" />
   <default revision="refs/tags/android-6.0.0_r1"
            remote="aosp"
            sync-j="4" />
@@ -48,6 +50,11 @@
   <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
+  
+  <project path="device/samsung/matisse" name="GalaxyTab4/android_device_samsung_matisse" remote="sub" revision="aosp-6.0"/>
+  <project path="vendor/samsung/matisse" name="GalaxyTab4/android_vendor_samsung_matisse" remote="sub" revision="aosp-6.0"/>
+  <project path="kernel/samsung/lt03lte" name="GalaxyTab4/android_kernel_samsung_lt03lte" remote="sub" revision="aosp-6.0"/>
+  
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs,pdk-fs" />
