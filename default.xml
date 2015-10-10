@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="aosp"
+  <remote  name="github"
            fetch=".." />
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com" />
   <remote  name="sub" 
            fetch="ssh://git@github.com" />
   <default revision="refs/tags/android-6.0.0_r1"
